@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald&display=swap');
 
 * {
     margin: 0;
@@ -7,15 +7,15 @@
 }
 
 body {
-    font-family: lato, sans-serif;
+    font-family: Lato, sans-serif;
     font-weight: 300;
-    color: #3a3a3a
+    color: #3a3a3a;
 }
 
 /* headings and logo */
 
 h1, h2 {
-    font-family: oswald, sans-serif;
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: #252525;
@@ -34,7 +34,7 @@ h1, h2 {
 }
 
 #menu, #logo {
-line-height: 75px;
+    line-height: 75px;
 }
 
 #menu li {
@@ -56,20 +56,26 @@ line-height: 75px;
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* hero image*/
+/* hero image and cover text */
 
 #hero-outer {
     height: 600px;
     width: 100%;
     overflow: hidden;
+
+    position: relative;
+}
+
+#cover-text, #cover-text h2 {
+    color: #fff;
 }
 
 #hero-image {
     height: 600px;
     width: 100%;
-    background: url('../images/hero-image.webp') no-repeat, center, center;
+    background: url('../images/hero-image.webp') no-repeat center center;
 
-    /* animates zoom effect on landing page */
+    /* animates zoom effect on loading page */
     animation-name: hero-zoom;
     animation-duration: 5s;
     animation-fill-mode: forwards;
@@ -83,4 +89,24 @@ line-height: 75px;
     to{
         transform: scale(1.1);
     }
+}
+
+#cover-text {
+    font-size: 130%;
+    font-family: Oswald, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    width: 300px;
+    height: 200px;
+
+    padding-top: 40px;
+    padding-left: 10px;
+
+    background-color: rgba(241, 109, 107, .7);
+
+    bottom: 30px;
+    right: 150px;
+
+    position: absolute;
 }
